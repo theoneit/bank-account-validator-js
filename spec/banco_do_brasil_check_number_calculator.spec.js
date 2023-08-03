@@ -4,7 +4,7 @@ describe("BancoDoBrasilCheckNumberCalculator", function() {
 
   beforeEach(function() { 
     bankAccount = {
-      agencyNumber        : "1584",
+      agencyNumber : "1584",
       agencyCheckNumber   : "9",
       accountNumber       : "00210169",
       accountCheckNumber  : "6"

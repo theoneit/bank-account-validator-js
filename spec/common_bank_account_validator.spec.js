@@ -67,23 +67,23 @@ describe("CommonBankAccountValidator", function() {
   describe("validate agency check number", function(){
 
     it("accepts a valid agency check number", function() {
-      expect(Moip.CommonBankAccountValidator.agencyCheckNumberIsValid("9")).toBeTruthy();
+      expect(Moip.CommonBankAccountValidator.isAgencyCheckNumberValid("9")).toBeTruthy();
     });
 
     it("accepts a valid agency check with letters", function() {
-      expect(Moip.CommonBankAccountValidator.agencyCheckNumberIsValid("A")).toBeTruthy();
+      expect(Moip.CommonBankAccountValidator.isAgencyCheckNumberValid("A")).toBeTruthy();
     });
 
     it("accepts a valid agency check empty", function() {
-      expect(Moip.CommonBankAccountValidator.agencyCheckNumberIsValid("")).toBeTruthy();
+      expect(Moip.CommonBankAccountValidator.isAgencyCheckNumberValid("")).toBeTruthy();
     });
 
     it("accepts a valid agency check equal zero", function() {
-      expect(Moip.CommonBankAccountValidator.agencyCheckNumberIsValid("0")).toBeTruthy();
+      expect(Moip.CommonBankAccountValidator.isAgencyCheckNumberValid("0")).toBeTruthy();
     });
 
     it("does NOT accept agency check greater than one digits", function() {
-      expect(Moip.CommonBankAccountValidator.agencyCheckNumberIsValid("12")).toBeFalsy();
+      expect(Moip.CommonBankAccountValidator.isAgencyCheckNumberValid("12")).toBeFalsy();
     });
 
   });
