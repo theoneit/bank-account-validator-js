@@ -1,9 +1,9 @@
 {
-  "name": "bank-account-validator",
+  "name": "@theoneit/bank-account-validator",
   "version": "1.0.0",
   "description": "Validação para contas bancárias",
   "author": "TheOneIT",
-  "main": "index.js",
+  "main": "bank-account.js",
   "scripts": {
     "test": "npx mocha \"spec/*.js\" --file ./spec/setups/global-requires.js"
   },
