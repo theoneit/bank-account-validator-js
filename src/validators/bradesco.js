@@ -1,5 +1,5 @@
 const commonValidator = require('./common');
-const numberCalculator = require('../number-calculators/banrisul');
+const numberCalculator = require('../number-calculators/bradesco');
 
 const ACCOUNT_NUMBER_LENGTH = 7;
 const AGENCY_CHECK_NUMBER_LENGTH = 1;

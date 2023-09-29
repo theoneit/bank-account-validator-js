@@ -4,16 +4,18 @@ const ACCOUNT_NUMBER_LENGTH = 6;
 
 const validator = {
   isAgencyNumberValid(agencyNumber) {
-    return shyvshyv.isAgencyNumberValid(agencyNumber);
+    return commonValidator.isAgencyNumberValid(agencyNumber);
   },
 
   isAgencyCheckNumberValid(agencyCheckNumber) {
-    return agencyCheckNumber === undefined || agencyCheckNumber === "";
+    return agencyCheckNumber === undefined || agencyCheckNumber === '';
   },
 
   isAccountNumberValid(accountNumber) {
-    return accountNumber.length == ACCOUNT_NUMBER_LENGTH &&
-      commonValidator.isAccountNumberValid(accountNumber);
+    return (
+      accountNumber.length == ACCOUNT_NUMBER_LENGTH &&
+      commonValidator.isAccountNumberValid(accountNumber)
+    );
   },
 
   isAccountCheckNumberValid(accountCheckNumber) {

@@ -1,6 +1,6 @@
 const numberCalculator = {
   calculate(agencyNumber, accountNumber) {
-    const numbers = (agencyNumber+accountNumber).split("");
+    const numbers = (agencyNumber + accountNumber).split('');
     let sequenceSum = 0;
     for (let index = 0; index < numbers.length; index++) {
       const number = parseInt(numbers[index]);
@@ -16,15 +16,18 @@ const numberCalculator = {
     return number * (index % 2 === 0 ? 2 : 1);
   },
 
-  adjustAccordingLength(sequence) {
-    if(sequence > 9) {
-      const numbers = sequence.toString().split("");
-      let sequence = 0;
+  adjustAccordingLength(sequenceNumber) {
+    let sequence = sequenceNumber;
+
+    if (sequence && sequence > 9) {
+      const numbers = sequence.toString().split('');
+
+      sequence = 0;
       for (let index = 0; index < numbers.length; index++) {
         sequence += parseInt(numbers[index]);
       }
     }
-  
+
     return sequence;
   },
 
@@ -32,11 +35,11 @@ const numberCalculator = {
     const module = sequenceSum % 10;
 
     if (module === 0) {
-      return "0";
+      return '0';
     } else {
       return (10 - module).toString();
     }
-  }
+  },
 };
 
 module.exports = numberCalculator;
